@@ -1,0 +1,20 @@
+/*Asterisk wildacar selector to overide default styles added by the browser*/
+* {
+    padding: 0 ;
+    margin: 0 ;
+    box-sizing: 0 ;
+}
+
+
+/**/
+header{
+    background-color: red;
+}
+/**/
+main{
+    background-color: orange;
+}
+/**/
+footer{
+    background-color: green;
+}
