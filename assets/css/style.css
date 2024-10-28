@@ -51,13 +51,25 @@ h1 {
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
-/**/
+
+/*Navbar styles with dropdown toggle*/
+nav{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+}
+
+/*Main section*/
 main{
     background-color: orange;
     /*Make main element take up any surplus space to push footer down*/
     flex: 10 auto;
 }
-/**/
+/*Footer*/
 footer{
     background-color: green;
 }
