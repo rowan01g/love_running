@@ -5,7 +5,7 @@
 * {
     padding: 0 ;
     margin: 0 ;
-    box-sizing: 0 ;
+    box-sizing: border-box ;
 }
 
 /*General styles*/
@@ -15,11 +15,11 @@ body{
     flex-direction: column;
     /*Generic project styles*/
     color: #3a3a3a;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3 {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
@@ -51,7 +51,7 @@ h1, h2, h3 {
 }
 
 #circle-cover-bg {
-    background: url("../images/reasons-image.webp") no-repeat top center/cover;
+    background: url("../images/reasons-image.webp") no-repeat top center / cover;
     height: 90vw;
     width: 90vw;
     margin-bottom: 20px;
@@ -90,7 +90,7 @@ header a {
     letter-spacing: 4px;
     list-style-type: none;
 }
-#menu li{
+#menu > li{
     margin-bottom: 1em;
 }
 
@@ -174,11 +174,11 @@ main{
 @media screen and (min-width: 768px) {
     /*Header*/
     nav {
-    display: block;
-    position: relative;
-    box-shadow: none;
-    width: fit-content;
-    padding-right: 1rem; 
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem; 
     }
 
     #menu {
@@ -196,7 +196,7 @@ main{
     #logo {
         font-size: 280%;
         line-height: 75px;
-        margin: 0 0.5rem
+        margin: 0 0.5rem;
     }
     /* Main Content*/
     main {
@@ -210,6 +210,24 @@ main{
         right: 50px;
     }
 
+    /*Reasons section*/
+    #benefits-physical,
+    #benefits-mental {
+        display:flex;
+        flex-direction: column;
+        width:100%
+    }
+    
+    #benefits-physical > div,
+    #benefits-mental > div {
+        width: 75%
+    }
+
+    #benefits-mental > div {
+        text-align: end;
+        align-self: flex-end;
+    }
+
 }
 
 /*Large devices (laptops and desktops, 992px and up)*/
@@ -218,4 +236,33 @@ main{
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
+}
+
+/*Large devices 1200px and wider*/
+@media screen and (min-width: 1200px) {
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits > div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0; 
+    }
+
+    #benefits-mental {
+        order:1;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical > div {
+        align-self: flex-end;
+    }
+
 }
